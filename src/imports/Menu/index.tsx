@@ -10,8 +10,8 @@ import {
 } from "react-icons/fa";
 
 // IMPORT ASSET (Sama seperti Homepage)
-import imgEllipse1 from "@/imports/HomePage/1ac8ddaf021673441d5d2fba45ca235c4a7d01f5.png";
-import imgEllipse2 from "@/imports/HomePage/c889ce71c2918f73229221c88e866fb1ce054506.png";
+import imgEllipse1 from "./1ac8ddaf021673441d5d2fba45ca235c4a7d01f5.png";
+import imgEllipse2 from "./c889ce71c2918f73229221c88e866fb1ce054506.png";
 import Hero from "./Hero.png";
 
 export default function MenuPage() {
