@@ -14,6 +14,30 @@ import imgEllipse1 from "./1ac8ddaf021673441d5d2fba45ca235c4a7d01f5.png";
 import imgEllipse2 from "./c889ce71c2918f73229221c88e866fb1ce054506.png";
 import Hero from "./Hero.png";
 
+// List placeholder gambar kopi/minuman berkualitas tinggi dari Unsplash
+const COFFEE_PLACEHOLDERS = [
+  "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600&auto=format&fit=crop", // Latte Art
+  "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop", // Iced Coffee
+  "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=600&auto=format&fit=crop", // Sweet Latte/Cappuccino
+  "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=600&auto=format&fit=crop", // Coffee Bean and Cup
+  "https://images.unsplash.com/photo-1507133750040-4a8f57021571?q=80&w=600&auto=format&fit=crop", // Iced Latte Glass
+  "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=600&auto=format&fit=crop", // Hot Espresso Creamy
+  "https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600&auto=format&fit=crop", // Creamy Milkshake/Iced Drink
+  "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?q=80&w=600&auto=format&fit=crop", // Iced Chocolate/Milo Float
+  "https://images.unsplash.com/photo-1553909489-cd47e0907980?q=80&w=600&auto=format&fit=crop", // Iced Coffee Cup
+  "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=600&auto=format&fit=crop"  // Iced Tea / Fruit Tea
+];
+
+// Menghasilkan placeholder acak yang stabil berdasarkan nama produk
+const getPlaceholderImage = (name: string): string => {
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) {
+    hash = name.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const index = Math.abs(hash) % COFFEE_PLACEHOLDERS.length;
+  return COFFEE_PLACEHOLDERS[index];
+};
+
 export default function MenuPage() {
   const [activeVariant, setActiveVariant] = useState("All Variant");
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -27,7 +51,7 @@ export default function MenuPage() {
       items: [
         {
           name: "Oat Coffee Caramel Macchiato",
-          img: "/assets/premium_oat_caramel_machiato-CtdWSb1e.jpg",
+          img: "/assets/Oat Coffee Caramel Macchiato.jpg",
         },
         {
           name: "Drink Beng-Beng Cream Caramel",
@@ -475,8 +499,11 @@ export default function MenuPage() {
                       >
                         <div className="overflow-hidden rounded-2xl shadow-[0px_4px_10px_rgba(0,0,0,0.5)] mb-4 bg-[#30211a] border border-white/5 relative">
                           <img
-                            src={product.img}
+                            src={product.img || getPlaceholderImage(product.name)}
                             alt={product.name}
+                            onError={(e) => {
+                              e.currentTarget.src = getPlaceholderImage(product.name);
+                            }}
                             className="w-full aspect-[4/5] object-cover group-hover:scale-110 transition duration-500"
                           />
                           {/* Overlay Gradient on Hover */}
