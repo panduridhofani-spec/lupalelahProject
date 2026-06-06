@@ -331,7 +331,30 @@ export default function MenuPage() {
   return (
     <div className="bg-[#4A1010] min-h-screen font-sans text-white">
       <Helmet>
-        <title>Menu | Lupa Lelah</title>
+        <title>Menu Varian Kopi & Makanan | Lupa Lelah Cafe Malang</title>
+        <meta
+          name="description"
+          content="Lihat menu lengkap Lupa Lelah Cafe Malang. Varian Premium Series, Classic Series, Choco Series, Boba Series, Tea Series, Cheese Series, Yakult Series, Creamy Series, Ice Cream, Coffee Series, dan Silky Pudding."
+        />
+        <meta
+          name="keywords"
+          content="menu lupa lelah, kopi susu gula aren, boba brown sugar, matcha cheese, silky pudding malang, menu kopi malang, harga menu lupa lelah"
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://lupalelahcafe.com/menu" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Menu Varian Kopi & Makanan | Lupa Lelah Cafe Malang" />
+        <meta property="og:description" content="Temukan berbagai varian minuman kopi segar, teh keju, boba premium, hingga hidangan penutup lezat hanya di Lupa Lelah Cafe Malang." />
+        <meta property="og:image" content="https://lupalelahcafe.com/assets/Hero-DPG6f4OS.png" />
+        <meta property="og:url" content="https://lupalelahcafe.com/menu" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Menu Varian Kopi & Makanan | Lupa Lelah Cafe Malang" />
+        <meta name="twitter:description" content="Temukan berbagai varian minuman kopi segar, teh keju, boba premium, hingga hidangan penutup lezat hanya di Lupa Lelah Cafe Malang." />
+        <meta name="twitter:image" content="https://lupalelahcafe.com/assets/Hero-DPG6f4OS.png" />
       </Helmet>
 
       {/* --- NAVBAR (Sama persis dengan Homepage) --- */}
@@ -409,6 +432,14 @@ export default function MenuPage() {
             className="w-full h-full object-cover brightness-[0.4]"
           />
         </div>
+        <div className="relative z-10 text-center px-4">
+          <h1 className="font-['Libre_Baskerville:Bold',sans-serif] text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg text-white">
+            Menu Varian Kami
+          </h1>
+          <p className="font-['Plus_Jakarta_Sans:Medium',sans-serif] text-base md:text-lg mt-4 text-gray-200 max-w-md mx-auto">
+            Nikmati racikan rasa istimewa mulai dari kopi klasik hingga boba series premium.
+          </p>
+        </div>
       </div>
 
       {/* --- QUICK LINKS CATEGORY (Pengganti Toggle HAUS!) --- */}
@@ -451,7 +482,7 @@ export default function MenuPage() {
         </div>
 
         {/* SIDEBAR */}
-        <div className="hidden lg:block w-[20%]">
+        <aside className="hidden lg:block w-[20%]">
           <div className="rounded-3xl px-6 py-8 shadow-2xl bg-[#30211a] sticky top-28 border border-white/5">
             <div className="mb-6 text-[22px] font-['Libre_Baskerville:Bold',sans-serif] font-bold border-b border-white/10 pb-4">
               Pilih Varian
@@ -478,10 +509,10 @@ export default function MenuPage() {
               ))}
             </div>
           </div>
-        </div>
+        </aside>
 
         {/* MAIN GRID */}
-        <div className="lg:w-[80%] lg:pl-12 w-full">
+        <main className="lg:w-[80%] lg:pl-12 w-full">
           {displayedData.length > 0 ? (
             displayedData.map((section, idx) => (
               <div className="mb-16" key={idx}>
@@ -523,7 +554,7 @@ export default function MenuPage() {
               Varian tidak ditemukan.
             </div>
           )}
-        </div>
+        </main>
       </div>
 
       {/* 9. FOOTER */}

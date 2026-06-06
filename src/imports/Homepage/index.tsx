@@ -149,11 +149,31 @@ export default function Homepage() {
 
       {/* 1. PLUGIN SEO & ELFSIGHT SCRIPT */}
       <Helmet>
-        <title>Lupa Lelah | Singgah Sebentar Lupakan Lelah</title>
+        <title>Lupa Lelah Cafe Malang | Singgah Sebentar, Lupakan Lelah</title>
         <meta
           name="description"
-          content="Hadirkan suasana nyaman dengan aroma kopi yang menemani setiap momen berharga."
+          content="Lupa Lelah Cafe Malang - Nikmati racikan kopi susu gula aren terbaik, boba series premium, silky pudding lezat, dan hidangan bule kampung di tempat nongkrong terfavorit Lowokwaru, Kota Malang."
         />
+        <meta
+          name="keywords"
+          content="lupa lelah cafe, cafe malang, tempat nongkrong malang, kopi susu gula aren, kopi malang, lowokwaru cafe, skopel, kuliner malang, boba malang, silky pudding malang"
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://lupalelahcafe.com" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Lupa Lelah Cafe Malang | Singgah Sebentar, Lupakan Lelah" />
+        <meta property="og:description" content="Hadirkan suasana nyaman dengan aroma kopi terbaik yang menemani setiap momen berharga Anda di Lupa Lelah Cafe Malang." />
+        <meta property="og:image" content="https://lupalelahcafe.com/assets/Hero-DPG6f4OS.png" />
+        <meta property="og:url" content="https://lupalelahcafe.com" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Lupa Lelah Cafe Malang | Singgah Sebentar, Lupakan Lelah" />
+        <meta name="twitter:description" content="Hadirkan suasana nyaman dengan aroma kopi terbaik yang menemani setiap momen berharga Anda di Lupa Lelah Cafe Malang." />
+        <meta name="twitter:image" content="https://lupalelahcafe.com/assets/Hero-DPG6f4OS.png" />
+
         <script src="https://elfsightcdn.com/platform.js" async></script>
       </Helmet>
 
