@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lupalelahcafe.com/sitemap.xml
