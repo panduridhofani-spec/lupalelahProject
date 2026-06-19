@@ -314,7 +314,7 @@ export default function MenuPage() {
 
   const displayedData =
     activeVariant === "All Variant"
-      ? menuData
+      ? menuData 
       : menuData.filter((section) => section.category === activeVariant);
 
   // WIDGET BACK TO TOP
